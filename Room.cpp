@@ -12,12 +12,12 @@ std::string Room::getName()
 
 std::istream& operator>> (std::istream& stream, Room& ob)
 {
-    std::cin >> ob.mName;
+    stream >> ob.mName;
     return stream;
 }
 
 std::ostream& operator<< (std::ostream& stream, const Room& ob)
 {
-    std::cout << ob.mName << '\n';
+    stream << ob.mName << '\n';
     return stream;
 }

@@ -8,6 +8,7 @@
 class Activity
 {
 public:
+    Activity(){};
     Activity(Room*, Person*, std::string);
 
     Room* getRoom() const;

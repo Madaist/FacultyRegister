@@ -8,7 +8,7 @@
 class Discipline
 {
 public:
-    Discipline();
+    Discipline(){};
     Discipline(std::string subject, std::string type, std::vector<Activity*> activities);
 
     std::string getSubject();
@@ -16,6 +16,9 @@ public:
 
     void setSubject(std::string);
     void setType(std::string);
+
+    friend std::istream& operator >> (std::istream& stream, Discipline& ob);
+    friend std::ostream& operator << (std::ostream& stream, const Discipline& ob);
 
 private:
     std::string mSubject;

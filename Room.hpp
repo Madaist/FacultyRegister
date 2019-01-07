@@ -6,6 +6,7 @@
 class Room
 {
 public:
+    Room(){}
     Room(std::string);
     std::string getName();
 

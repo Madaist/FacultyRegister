@@ -27,4 +27,16 @@ void Discipline::setType(std::string type)
     mType = type;
 }
 
+std::istream& operator >> (std::istream& stream, Discipline& ob)
+{
+    stream >> ob.mSubject;
+    stream >> ob.mType;
+    return stream;
+}
 
+std::ostream& operator << (std::ostream& stream, const Discipline& ob)
+{
+    stream << ob.mSubject;
+    stream << ob.mType;
+    return stream;
+}
